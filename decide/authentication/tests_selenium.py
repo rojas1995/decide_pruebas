@@ -9,7 +9,7 @@ class TestSignup(unittest.TestCase):
     def test_signup_fire(self):
         self.driver.get("http://localhost:5000/admin/login/?next=/admin/")
         self.driver.find_element_by_id('id_username').send_keys("admin")
-        self.driver.find_element_by_id('id_idpassword').send_keys("admin")
+        self.driver.find_element_by_id('id_password').send_keys("admin")
         self.driver.find_element_by_id('login-form').click()
         self.assertTrue(len(self.driver.find_element_by_id('user-tools'))>0) 
     def tearDown(self):
