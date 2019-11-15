@@ -1,5 +1,6 @@
 import unittest
 from selenium import webdriver
+from django.contrib.auth.models import User
 
 class TestSignup(unittest.TestCase):
 
