@@ -19,10 +19,14 @@ services:
       - "5000"
     volumes:
       - static:/app/static
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - $HOME/.Xauthority:/root/.Xauthority
     depends_on:
       - db
     networks:
       - decide
+    environment:
+       DISPLAY: $DISPLAY
   nginx:
     restart: always
     container_name: decide_nginx
