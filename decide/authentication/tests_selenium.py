@@ -5,6 +5,12 @@ class TestSignup(unittest.TestCase):
 
     def setUp(self):
         self.driver = webdriver.Firefox()
+        
+        u2 = User(username='admin')
+        u2.set_password('admin')
+        u2.is_superuser = True
+        u2.save()
+
 
     def test_signup_fire(self):
         self.driver.get("http://localhost:5000/admin/login/?next=/admin/")
