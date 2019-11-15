@@ -7,11 +7,11 @@ class TestSignup(unittest.TestCase):
         self.driver = webdriver.Firefox()
 
     def test_signup_fire(self):
-        self.driver.get("http://localhost:8000/add/")
-        self.driver.find_element_by_id('id_title').send_keys("test title")
-        self.driver.find_element_by_id('id_body').send_keys("test body")
-        self.driver.find_element_by_id('submit').click()
-        self.assertIn("http://localhost:8000/", self.driver.current_url)
+        self.driver.get("http://localhost:80/admin/login/?next=/admin/")
+        self.driver.find_element_by_id('id_username').send_keys("admin")
+        self.driver.find_element_by_id('id_idpassword').send_keys("admin")
+        self.driver.find_element_by_id('login-form').click()
+        self.assertTrue(len(self.driver.find_element_by_id('user-tools'))>0) 
     def tearDown(self):
         self.driver.quit
 

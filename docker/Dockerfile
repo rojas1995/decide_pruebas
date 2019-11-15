@@ -8,8 +8,14 @@ RUN pip install gunicorn
 RUN pip install psycopg2
 RUN pip install ipdb
 RUN pip install ipython
+
 RUN pip install coverage==3.6
 RUN pip install selenium 
+
+RUN wget https://github.com/mozilla/geckodriver/releases/download/v0.24.0/geckodriver-v0.24.0-linux64.tar.gz
+RUN tar -x geckodriver -zf geckodriver-v0.24.0-linux64.tar.gz -O > /usr/bin/geckodriver
+RUN chmod +x /usr/bin/geckodriver
+RUN rm geckodriver-v0.24.0-linux64.tar.gz
 
 WORKDIR /app
 
