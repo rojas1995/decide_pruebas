@@ -19,6 +19,9 @@ class CensusTestCase(BaseTestCase):
         super().tearDown()
         self.census = None
 
+    def test_store_census(self):
+        self.assertEqual(self.Census.count(), 1)
+
     def test_check_vote_permissions(self):
         response = self.client.get('/census/{}/?voter_id={}'.format(1, 2), format='json')
         self.assertEqual(response.status_code, 401)
