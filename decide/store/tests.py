@@ -193,3 +193,12 @@ class StoreTextCase(BaseTestCase):
         self.voting.save()
         response = self.client.post('/store/', data, format='json')
         self.assertEqual(response.status_code, 401)
+    def test_poll(self):
+        """
+        Test that Poll is correctly created and saved in DB
+        """
+        ca = Ca.objects.create(id=1312, name="Andalucia")
+        census = Census.objects.create(id=1222, title="Jose", postalCode=11510, ca=ca)
+        poll = Poll.objects.create(id=1319, title="Prueba", description="Votación de prueba", startDate="2017-01-13", endDate="2018-01-10",census=census, participantes=0, votos=0)
+
+        self.assertEqual(poll.id, 1319)
