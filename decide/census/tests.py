@@ -20,7 +20,7 @@ class CensusTestCase(BaseTestCase):
         self.census = None
 
     def test_store_census(self):
-        self.assertEqual(self.Census.count(), 1)
+        self.assertEqual(Census.objects.count(), 1)
 
     def test_check_vote_permissions(self):
         response = self.client.get('/census/{}/?voter_id={}'.format(1, 2), format='json')
