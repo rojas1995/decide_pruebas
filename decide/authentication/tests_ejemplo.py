@@ -1,6 +1,6 @@
 from django.test import TestCase
 
-class AuthTestCase(APITestCase):
+class AuthSimpleTCase(unittest.TestCase):
 
     def test_basic_addition(self):
         """
