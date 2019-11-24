@@ -75,15 +75,15 @@ MODULES = [
 BASEURL = 'https://decide-19-20-jagalindo.herokuapp.com'
 
 APIS = {
-    'authentication': 'http://localhost:80',
-    'base': 'http://localhost:80',
-    'booth': 'http://localhost:80',
-    'census': 'http://localhost:80',
-    'mixnet': 'http://localhost:80',
-    'postproc': 'http://localhost:80',
-    'store': 'http://localhost:80',
-    'visualizer': 'http://localhost:80',
-    'voting': 'http://localhost:80',
+    'authentication': 'https://localhost:80',
+    'base': 'https://localhost:80',
+    'booth': 'https://localhost:80',
+    'census': 'https://localhost:80',
+    'mixnet': 'https://localhost:80',
+    'postproc': 'https://localhost:80',
+    'store': 'https://localhost:80',
+    'visualizer': 'https://localhost:80',
+    'voting': 'https://localhost:80',
 }
 
 
