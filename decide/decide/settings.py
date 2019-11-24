@@ -71,8 +71,22 @@ MODULES = [
     'voting',
 ]
 
-BASEURL = 'http://localhost:8000'
+#BASEURL = 'http://localhost:8000'
 BASEURL = 'https://decide-19-20-jagalindo.herokuapp.com'
+
+APIS = {
+    'authentication': 'http://localhost:8000',
+    'base': 'http://localhost:8000',
+    'booth': 'http://localhost:8000',
+    'census': 'http://localhost:8000',
+    'mixnet': 'http://localhost:8000',
+    'postproc': 'http://localhost:8000',
+    'store': 'http://localhost:8000',
+    'visualizer': 'http://localhost:8000',
+    'voting': 'http://localhost:8000',
+}
+
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
